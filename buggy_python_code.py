@@ -3,7 +3,6 @@
 import pickle
 import subprocess
 import base64
-import subprocess
 import flask
 
 # Input injection
@@ -20,7 +19,7 @@ def foo(request, user):
 
 # Pickles
 class RunBinSh(object):
-    def __reduce__(self):
+    def __reduce__():
         return (subprocess.Popen, (('/bin/sh',),))
 
 def import_urlib_version(version):
